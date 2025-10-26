@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental JS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+    <script src="models.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/51de8b8661.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="row nav__row">
+        <a href="index.html"
+          ><img src="assets/logo.png" alt="" class="nav__logo"
+        /></a>
+        <ul class="nav__links">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">About</a></li>
+          <li><a href="models.html" class="nav__link">Vehicle Models</a></li>
+          <li><a href="#" class="nav__link">Testimonials</a></li>
+          <li><a href="#" class="nav__link">Our Team</a></li>
+          <li><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+        <div class="nav__btns">
+          <a href="#" class="nav__link">Sign In</a>
+          <button class="nav__btn">Register</button>
+        </div>
+        <button onclick="toggleMenu()" class="nav__menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <nav class="menu">
+      <button onclick="toggleMenu()" class="menu__close-btn">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <ul class="menu__links">
+        <li>
+          <a href="index.html" onclick="toggleMenu()" class="menu__link"
+            >Home</a
+          >
+        </li>
+        <li><a href="#" onclick="toggleMenu()" class="menu__link">About</a></li>
+        <li>
+          <a href="models.html" onclick="toggleMenu()" class="menu__link"
+            >Vehicle Models</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu()" class="menu__link">Testimonials</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu()" class="menu__link">Our Team</a>
+        </li>
+        <li>
+          <a href="#" onclick="toggleMenu()" class="menu__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <header id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="row hero__row">
+          <h1 class="hero__title">Vehicle Models</h1>
+          <h2 class="hero__subtitle">Home / Vehicle Models</h2>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="models">
+        <div class="container">
+          <div class="row models__row">
+            <div class="models__header">
+              <h2 class="models__header__title">Vehicle Models</h2>
+              <select
+                onchange="renderModels()"
+                class="models__header__sort"
+                id="models-sort"
+              >
+                <option
+                  class="models__header__sort__option"
+                  value=""
+                  disabled
+                  selected
+                >
+                  Sort
+                </option>
+                <option
+                  class="models__header__sort__option"
+                  value="HIGH_TO_LOW"
+                >
+                  Price (High to low)
+                </option>
+                <option
+                  class="models__header__sort__option"
+                  value="LOW_TO_HIGH"
+                >
+                  Price (Low to high)
+                </option>
+                <option class="models__header__sort__option" value="RATING">
+                  Rating (High to low)
+                </option>
+              </select>
+            </div>
+            <div class="models__list" id="models-list">
+              <i class="fa-solid fa-spinner models__list__spinner"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <div class="footer__content footer__contact">
+            <h4 class="footer__contact__title"><strong>CAR</strong> Rental</h4>
+            <p class="footer__contact__para">
+              We offer a big range of vehicles for all your driving needs. We
+              have the perfect car to meet your needs.
+            </p>
+            <ul class="footer__contact__links">
+              <li>
+                <a href="tel:123456789" class="footer__contact__link"
+                  ><i class="fa-solid fa-phone"></i> (123) -456-789</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:carrental@gmail.com"
+                  class="footer__contact__link"
+                  ><i class="fa-solid fa-envelope"></i> carrental@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="https://xpeedstudio.com" class="footer__contact__link"
+                  >Design by XpeedStudio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__content footer__company">
+            <h4 class="footer__company__title">COMPANY</h4>
+            <ul class="footer__company__links">
+              <li><a href="#" class="footer__company__link">New York</a></li>
+              <li><a href="#" class="footer__company__link">Careers</a></li>
+              <li><a href="#" class="footer__company__link">Mobile</a></li>
+              <li><a href="#" class="footer__company__link">Blog</a></li>
+              <li><a href="#" class="footer__company__link">How we work</a></li>
+            </ul>
+          </div>
+          <div class="footer__content footer__hours">
+            <h4 class="footer__hours__title">WORKING HOURS</h4>
+            <ul class="footer__hours__times">
+              <li>
+                <p class="footer__hours__para">Mon - Fri: 9:00AM - 9:00PM</p>
+              </li>
+              <li><p class="footer__hours__para">Sat: 9:00AM - 9:00PM</p></li>
+              <li><p class="footer__hours__para">Sun: Closed</p></li>
+            </ul>
+          </div>
+          <div class="footer__content footer__subscribe">
+            <h4 class="footer__subscribe__title">SUBSCRIPTION</h4>
+            <p class="footer__subscribe__para">
+              Subscribe your Email address for latest news & updates.
+            </p>
+            <form action="#" class="footer__subscribe__form">
+              <input
+                type="email"
+                placeholder="Enter Email Address"
+                class="footer__subscribe__form__input"
+              />
+              <button type="submit" class="footer__subscribe__form__btn">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

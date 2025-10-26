@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/51de8b8661.js"
       crossorigin="anonymous"
@@ -14,11 +14,13 @@
   <body>
     <nav>
       <div class="row nav__row">
-        <a href="#"><img src="assets/logo.png" alt="" class="nav__logo" /></a>
+        <a href="index.html"
+          ><img src="assets/logo.png" alt="" class="nav__logo"
+        /></a>
         <ul class="nav__links">
-          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="index.html" class="nav__link">Home</a></li>
           <li><a href="#" class="nav__link">About</a></li>
-          <li><a href="#" class="nav__link">Vehicle Models</a></li>
+          <li><a href="models.html" class="nav__link">Vehicle Models</a></li>
           <li><a href="#" class="nav__link">Testimonials</a></li>
           <li><a href="#" class="nav__link">Our Team</a></li>
           <li><a href="#" class="nav__link">Contact</a></li>
@@ -38,10 +40,14 @@
         <i class="fa-solid fa-x"></i>
       </button>
       <ul class="menu__links">
-        <li><a href="#" onclick="toggleMenu()" class="menu__link">Home</a></li>
+        <li>
+          <a href="index.html" onclick="toggleMenu()" class="menu__link"
+            >Home</a
+          >
+        </li>
         <li><a href="#" onclick="toggleMenu()" class="menu__link">About</a></li>
         <li>
-          <a href="#" onclick="toggleMenu()" class="menu__link"
+          <a href="models.html" onclick="toggleMenu()" class="menu__link"
             >Vehicle Models</a
           >
         </li>
